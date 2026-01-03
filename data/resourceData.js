@@ -313,11 +313,20 @@ Game.storageData = (function(){
         }
     });
 
+    instance.storageUpgradeSteel = $.extend({}, baseUpgradeData, {
+        desc: 'Upgrade your Steel storage size to ',
+        resource: 'steel',
+        cost: {
+            'steel': 50
+        }
+    });
+
     instance.storageUpgradeMetal = $.extend({}, baseUpgradeData, {
         desc: 'Upgrade your Metal storage size to ',
         resource: 'metal',
         cost: {
-            'metal': 50
+            'metal': 50,
+            'steel': 20
         }
     });
 
