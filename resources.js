@@ -98,11 +98,19 @@ function upgradeUraniumStorage(){
 }
 
 function upgradeOilStorage(){
-	if(getResource(RESOURCE.Oil) >= getStorage(RESOURCE.Oil)*storagePrice && getResource(RESOURCE.Metal) >= getStorage(RESOURCE.Oil)/2.5*storagePrice){
+	if(getResource(RESOURCE.Oil) >= getStorage(RESOURCE.Oil)*storagePrice && getResource(RESOURCE.Steel) >= getStorage(RESOURCE.Oil)/2.5*storagePrice){
 		Game.resources.takeResource(RESOURCE.Oil, getStorage(RESOURCE.Oil)*storagePrice);
-		Game.resources.takeResource(RESOURCE.Metal, getStorage(RESOURCE.Oil)/2.5*storagePrice);
+		Game.resources.takeResource(RESOURCE.Steel, getStorage(RESOURCE.Oil)/2.5*storagePrice);
 		oilStorage = oilNextStorage;
 		oilNextStorage *= 2;
+	}
+}
+
+function upgradeSteelStorage(){
+	if(getResource(RESOURCE.Steel) >= getStorage(RESOURCE.Steel)*storagePrice){
+		Game.resources.takeResource(RESOURCE.Steel, getStorage(RESOURCE.Steel)*storagePrice);
+		steelStorage = steelNextStorage;
+		steelNextStorage *= 2;
 	}
 }
 
@@ -117,7 +125,7 @@ function upgradeMetalStorage(){
 function upgradeGemStorage(){
 	if(getResource(RESOURCE.Gem) >= getStorage(RESOURCE.Gem)*storagePrice && getResource(RESOURCE.Metal) >= getStorage(RESOURCE.Gem)/2.5*storagePrice){
 		Game.resources.takeResource(RESOURCE.Gem, getStorage(RESOURCE.Gem)*storagePrice);
-		Game.resources.takeResource(RESOURCE.Metal, getStorage(RESOURCE.Gem)/2.5*storagePrice);
+		Game.resources.takeResource(RESOURCE.Steel, getStorage(RESOURCE.Gem)/2.5*storagePrice);
 		gemStorage = gemNextStorage;
 		gemNextStorage *= 2;
 	}
@@ -126,7 +134,7 @@ function upgradeGemStorage(){
 function upgradeCharcoalStorage(){
 	if(getResource(RESOURCE.Charcoal) >= getStorage(RESOURCE.Charcoal)*storagePrice && getResource(RESOURCE.Metal) >= getStorage(RESOURCE.Charcoal)/2.5*storagePrice){
 		Game.resources.takeResource(RESOURCE.Charcoal, getStorage(RESOURCE.Charcoal)*storagePrice);
-		Game.resources.takeResource(RESOURCE.Metal, getStorage(RESOURCE.Charcoal)/2.5*storagePrice);
+		Game.resources.takeResource(RESOURCE.Steel, getStorage(RESOURCE.Charcoal)/2.5*storagePrice);
 		charcoalStorage = charcoalNextStorage;
 		charcoalNextStorage *= 2;
 	}
@@ -135,7 +143,7 @@ function upgradeCharcoalStorage(){
 function upgradeWoodStorage(){
 	if(getResource(RESOURCE.Wood) >= getStorage(RESOURCE.Wood)*storagePrice && getResource(RESOURCE.Metal) >= getStorage(RESOURCE.Wood)/2.5*storagePrice){
 		Game.resources.takeResource(RESOURCE.Wood, getStorage(RESOURCE.Wood)*storagePrice);
-		Game.resources.takeResource(RESOURCE.Metal, getStorage(RESOURCE.Wood)/2.5*storagePrice);
+		Game.resources.takeResource(RESOURCE.Steel, getStorage(RESOURCE.Wood)/2.5*storagePrice);
 		woodStorage = woodNextStorage;
 		woodNextStorage *= 2;
 	}
@@ -144,7 +152,7 @@ function upgradeWoodStorage(){
 function upgradeLunariteStorage(){
 	if(getResource(RESOURCE.Lunarite) >= getStorage(RESOURCE.Lunarite)*storagePrice && getResource(RESOURCE.Metal) >= getStorage(RESOURCE.Lunarite)*4*storagePrice){
 		Game.resources.takeResource(RESOURCE.Lunarite, getStorage(RESOURCE.Lunarite)*storagePrice);
-		Game.resources.takeResource(RESOURCE.Metal, getStorage(RESOURCE.Lunarite)*4*storagePrice);
+		Game.resources.takeResource(RESOURCE.Steel, getStorage(RESOURCE.Lunarite)*4*storagePrice);
 		lunariteStorage = lunariteNextStorage;
 		lunariteNextStorage *= 2;
 	}
