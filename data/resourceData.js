@@ -309,7 +309,7 @@ Game.storageData = (function(){
         resource: 'oil',
         cost: {
             'oil': 50,
-            'metal': 20
+            'steel': 20
         }
     });
 
@@ -335,7 +335,7 @@ Game.storageData = (function(){
         resource: 'gem',
         cost: {
             'gem': 50,
-            'metal': 20
+            'steel': 20
         }
     });
 
@@ -344,7 +344,7 @@ Game.storageData = (function(){
         resource: 'charcoal',
         cost: {
             'charcoal': 50,
-            'metal': 20
+            'steel': 20
         }
     });
 
@@ -353,7 +353,7 @@ Game.storageData = (function(){
         resource: 'wood',
         cost: {
             'wood': 50,
-            'metal': 20
+            'steel': 20
         }
     });
 
@@ -375,7 +375,7 @@ Game.storageData = (function(){
         resource: 'lunarite',
         cost: {
             'lunarite': 50,
-            'metal': 400
+            'steel': 400
         }
     });
 
