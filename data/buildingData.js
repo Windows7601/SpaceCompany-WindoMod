@@ -329,6 +329,36 @@ Game.buildingData = (function () {
     });
 
     // Metal
+    instance.steelT1 = $.extend({}, baseProducerBuilding, {
+        name: 'Refiner',
+        desc: 'Build a base for your refinery.',
+        resource: 'steel',
+        unlocked: true,
+        resourcePerSecond: {
+            'steel': 1
+        },
+        cost: {
+            'steel': 10,
+            'metal': 5
+        }
+    });
+
+    instance.steelT2 = $.extend({}, baseProducerBuilding, {
+        name: 'Enforcery',
+        desc: 'Enforce Steel at a much faster pace.',
+        resource: 'steel',
+        resourcePerSecond: {
+            'energy': -2,
+            'steel': 6
+        },
+        cost: {
+            'steel': 160,
+            'gem': 100,
+            'oil': 80
+        }
+    });
+
+
     instance.metalT1 = $.extend({}, baseProducerBuilding, {
         name: 'Miner',
         desc: 'Build a pickaxe for your miner.',
