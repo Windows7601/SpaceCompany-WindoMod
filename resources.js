@@ -1,4 +1,5 @@
 // globally accessible convenience wrapper for Game.resources.getResource()
+// enable commit for deploy
 function getResource(id) {
 	return Game.resources.getResource(id);
 }
