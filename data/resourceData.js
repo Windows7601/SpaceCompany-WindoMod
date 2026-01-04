@@ -1,3 +1,4 @@
+// enable changes from commit via filler line
 Game.resourceCategoryData = (function () {
 
     var instance = {};
